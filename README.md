@@ -7,7 +7,7 @@ This is a repo for the paper *Efficiently Serving Large Multimodal Models Using 
   <img src="assets/diagrams/overview.png" alt="Our approach" width="80%">
 </div>
 
-
+<br>
 EPDServe implements the **Encode-Prefill-Decode (EPD) Disaggregation** architecture proposed in the EPD paper. It is designed to serve large multimodal models (LMMs) efficiently by **splitting the inference pipeline** into three independent stages:
 
 - 🎨 **Encoding Stage**: Processes multimodal inputs (images, audio, video)
