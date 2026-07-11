@@ -1,14 +1,14 @@
 # EPDServe: Disaggregated Serving System for Large Multimodal Models
 
-This is a repo for the paper *Efficiently Serving Large Multimodal Models Using EPD Disaggregation* ([Arxiv link](https://arxiv.org/abs/2501.05460)), accepted at ICML 2025 🎉
+This is a repo for the paper *Efficiently Serving Large Multimodal Models Using EPD Disaggregation* [[Arxiv](https://arxiv.org/abs/2501.05460)] 
+EPDServe is accepted at ICML 2025 🎉
 
-Link to Huawei AI Gallery Notebook: [[AI Gallery]](https://developer.huaweicloud.com/develop/aigallery/notebook/detail?id=f118c40f-834f-48e0-be3b-d2d3492ca6e5)
 
 <div align="center">
   <img src="assets/diagrams/overview.png" alt="Our approach" width="80%">
 </div>
 
-<br>
+
 EPDServe implements the **Encode-Prefill-Decode (EPD) Disaggregation** architecture proposed in the EPD paper. It is designed to serve large multimodal models (LMMs) efficiently by **splitting the inference pipeline** into three independent stages:
 
 - 🎨 **Encoding Stage**: Processes multimodal inputs (images, audio, video)
@@ -94,14 +94,6 @@ For mode details look at [README_CUDA.md](csrc/README_CUDA.md)
 - **vLLM** version 0.6.1.post2
 
 ---
-
-### Obtain code from AI gallary
-
-```bash
-!wget https://vbdai-notebooks.obs.cn-north-4.myhuaweicloud.com/epdserve/code.zip 
-!unzip -qo code.zip
-cd EPD-Disaggregation
-```
 
 ### Create Conda Environment
 
