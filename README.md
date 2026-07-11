@@ -29,7 +29,72 @@ Each stage operates independently with its own compute resources, scheduler, cac
 
 It is highly modular, extensible, and tightly aligned with the goals of reducing TTFT and maximizing E2ETP.
 
+
+## 🌍 Ecosystem Adoption
+
+Since the publication of EPDServe, **Encode–Prefill–Decode disaggregation has gained adoption across several open-source model-serving systems**:
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Project</th>
+      <th align="left">EPD Support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://docs.sglang.io/docs/advanced_features/epd_disaggregation">
+          <img src="assets/logos/sglang.svg" alt="SGLang" width="24" align="center">
+          &nbsp;<strong>SGLang</strong>
+        </a>
+      </td>
+      <td>
+        Supports independently deployed encoder, prefill, and decode workers, including multimodal embedding transfer and caching.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://vllm.ai/blog/2025-12-15-vllm-epd">
+          <img src="assets/logos/vllm.svg" alt="vLLM" width="24" align="center">
+          &nbsp;<strong>vLLM</strong>
+        </a>
+      </td>
+      <td>
+        Provides native encoder-disaggregation infrastructure for separating multimodal encoding from language-model execution.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://docs.nvidia.com/dynamo/user-guides/multimodal/encoder-disaggregation">
+          <img src="assets/logos/nvidia-dynamo.png" alt="NVIDIA Dynamo" width="24" align="center">
+          &nbsp;<strong>NVIDIA Dynamo</strong>
+        </a>
+      </td>
+      <td>
+        Supports both E/PD and fully disaggregated E/P/D deployments with multiple inference backends.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/xLLM-AI/xllm-service">
+          <img src="assets/logos/xllm.png" alt="xLLM" width="24" align="center">
+          &nbsp;<strong>xLLM-service</strong>
+        </a>
+      </td>
+      <td>
+        Implements three-stage EPD disaggregation and independent resource allocation for multimodal serving.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+These implementations demonstrate the broader applicability of separating multimodal inference into independently scalable encode, prefill, and decode stages.
+
+
 ---
+
+
 
 
 ## 🗂️ Code Structure
